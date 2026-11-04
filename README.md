@@ -18,4 +18,6 @@ Vulnerability data comes from the public OSV.dev database and can miss issues, e
 ## Signed evidence reports
 The report generator is not part of this repository. Signed reports are produced as a paid service (see the site).
 
+Contact: selfbrandedsupport@gmail.com
+
 License: MIT for the files in this repository.
