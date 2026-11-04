@@ -1,20 +1,20 @@
 {
  "format": "sbom-evidence/0.1",
  "tool": "sbom-evidence 0.1.0",
- "created": "2026-11-04T20:59:55Z",
- "head": "3e2ef901e5ab54245bc3519984747068f5493f490c8251d3b099dab9923d8823",
+ "created": "2026-11-04T21:20:46Z",
+ "head": "e9af1aeb600bad45df0d9d96d3160286c3188b8212ee298a43836d340d6674b1",
  "entries": [
   {
    "seq": 0,
    "type": "sbom",
    "data": {
     "file": "clean.cdx.json",
-    "sha256": "e5e0385f06699ad5da640725bfa84375f5e6f0019cd224573e931d8936c69289",
+    "sha256": "c791fd17dd6b15f23ac0ee50e7b978d1779227fcebcdc53aca25d6ffde6953cb",
     "format": "CycloneDX 1.5",
     "components": 3
    },
    "prev": "0000000000000000000000000000000000000000000000000000000000000000",
-   "hash": "c856630d49a46af1fb2494674b5359d4b6ace251d4b2f5aa6e9892427871dc5b"
+   "hash": "52cbe614222f6554959cdfd2ef19998dc3af07b8f4da2287d40e4c3f13e17f50"
   },
   {
    "seq": 1,
@@ -58,22 +58,22 @@
     "failures": [],
     "pass": true
    },
-   "prev": "c856630d49a46af1fb2494674b5359d4b6ace251d4b2f5aa6e9892427871dc5b",
-   "hash": "7a46a4c5c64f11fc1c357427712c7f39162cc04b2f975e9e6c84defb80322166"
+   "prev": "52cbe614222f6554959cdfd2ef19998dc3af07b8f4da2287d40e4c3f13e17f50",
+   "hash": "d699c92e0827ab5cd3c131367a3e474c989e3df9dd273d9855c1ad4249e8dccc"
   },
   {
    "seq": 2,
    "type": "vulnerability-scan",
    "data": {
     "source": "OSV.dev (api.osv.dev)",
-    "scanned_at": "2026-11-04T20:59:55Z",
+    "scanned_at": "2026-11-04T21:20:46Z",
     "components_scanned": 3,
     "components_skipped_no_purl": 0,
     "findings": [],
     "truncated": false
    },
-   "prev": "7a46a4c5c64f11fc1c357427712c7f39162cc04b2f975e9e6c84defb80322166",
-   "hash": "fc76cdbd4df8d7f85c632282f79f047442221c96419ea98dbde803e03c35dcb8"
+   "prev": "d699c92e0827ab5cd3c131367a3e474c989e3df9dd273d9855c1ad4249e8dccc",
+   "hash": "7293087d3d4323133042908155bca591688f0d12f9d02219b5ce6c918660fe8b"
   },
   {
    "seq": 3,
@@ -85,7 +85,7 @@
     },
     "RA-5 Vulnerability Monitoring and Scanning": {
      "status": "evidence-present",
-     "note": "scanned 3 of 3 components against OSV.dev (api.osv.dev) at 2026-11-04T20:59:55Z"
+     "note": "scanned 3 of 3 components against OSV.dev (api.osv.dev) at 2026-11-04T21:20:46Z"
     },
     "SI-2 Flaw Remediation": {
      "status": "evidence-present",
@@ -96,11 +96,11 @@
      "note": "supplier named for 100% of components, hashes for 100%"
     }
    },
-   "prev": "fc76cdbd4df8d7f85c632282f79f047442221c96419ea98dbde803e03c35dcb8",
-   "hash": "3e2ef901e5ab54245bc3519984747068f5493f490c8251d3b099dab9923d8823"
+   "prev": "7293087d3d4323133042908155bca591688f0d12f9d02219b5ce6c918660fe8b",
+   "hash": "e9af1aeb600bad45df0d9d96d3160286c3188b8212ee298a43836d340d6674b1"
   }
  ],
  "public_key": "w2cNRGpQduIjQuPwPZ+GchHMjlvlEkVMK/3eiMJSZPU=",
  "key_fingerprint": "8DC1CCF8C3052039",
- "signature": "gNckALA9nYPo5VoNHG6hU3DpFC4yE3Fg+HiK0cpbcBOEKe2NJ7CDOmsHGj+oanzZ+8Deq9gWcTZJp5UWAl9oAQ=="
+ "signature": "wAN24Rtw8vESL0quFTtCkD2uTEfGHlNWNFOzk3p83Ma+uv1e8vtgA1p2irhB9m8akFvOhTMAyWOFdOMoCQueCA=="
 }
