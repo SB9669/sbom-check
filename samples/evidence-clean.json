@@ -1,0 +1,106 @@
+{
+ "format": "sbom-evidence/0.1",
+ "tool": "sbom-evidence 0.1.0",
+ "created": "2026-11-04T20:59:55Z",
+ "head": "3e2ef901e5ab54245bc3519984747068f5493f490c8251d3b099dab9923d8823",
+ "entries": [
+  {
+   "seq": 0,
+   "type": "sbom",
+   "data": {
+    "file": "clean.cdx.json",
+    "sha256": "e5e0385f06699ad5da640725bfa84375f5e6f0019cd224573e931d8936c69289",
+    "format": "CycloneDX 1.5",
+    "components": 3
+   },
+   "prev": "0000000000000000000000000000000000000000000000000000000000000000",
+   "hash": "c856630d49a46af1fb2494674b5359d4b6ace251d4b2f5aa6e9892427871dc5b"
+  },
+  {
+   "seq": 1,
+   "type": "conformance",
+   "data": {
+    "standard": "NTIA minimum elements (2021)",
+    "components": 3,
+    "document_level": {
+     "author_of_sbom_data": true,
+     "timestamp": true,
+     "dependency_relationships": true
+    },
+    "component_level_covered": {
+     "supplier_name": 3,
+     "component_name": 3,
+     "component_version": 3,
+     "unique_identifier": 3
+    },
+    "recommended_covered": {
+     "hash": 3,
+     "license": 3
+    },
+    "coverage_pct": {
+     "supplier_name": 100,
+     "component_name": 100,
+     "component_version": 100,
+     "unique_identifier": 100,
+     "hash": 100,
+     "license": 100
+    },
+    "cisa_2025_draft_additions": {
+     "note": "hash, license, tool name and generation context from CISA's 2025 draft update to the minimum elements; verify against the current CISA publication",
+     "document_level": {
+      "tool_name": true,
+      "generation_context": true
+     },
+     "component_hash_pct": 100,
+     "component_license_pct": 100,
+     "pass": true
+    },
+    "failures": [],
+    "pass": true
+   },
+   "prev": "c856630d49a46af1fb2494674b5359d4b6ace251d4b2f5aa6e9892427871dc5b",
+   "hash": "7a46a4c5c64f11fc1c357427712c7f39162cc04b2f975e9e6c84defb80322166"
+  },
+  {
+   "seq": 2,
+   "type": "vulnerability-scan",
+   "data": {
+    "source": "OSV.dev (api.osv.dev)",
+    "scanned_at": "2026-11-04T20:59:55Z",
+    "components_scanned": 3,
+    "components_skipped_no_purl": 0,
+    "findings": [],
+    "truncated": false
+   },
+   "prev": "7a46a4c5c64f11fc1c357427712c7f39162cc04b2f975e9e6c84defb80322166",
+   "hash": "fc76cdbd4df8d7f85c632282f79f047442221c96419ea98dbde803e03c35dcb8"
+  },
+  {
+   "seq": 3,
+   "type": "control-mapping",
+   "data": {
+    "CM-8 System Component Inventory": {
+     "status": "evidence-present",
+     "note": "SBOM lists 3 components; NTIA gaps: none"
+    },
+    "RA-5 Vulnerability Monitoring and Scanning": {
+     "status": "evidence-present",
+     "note": "scanned 3 of 3 components against OSV.dev (api.osv.dev) at 2026-11-04T20:59:55Z"
+    },
+    "SI-2 Flaw Remediation": {
+     "status": "evidence-present",
+     "note": "0 known vulnerabilities, 0 with a fixed version available"
+    },
+    "SR-4 Provenance": {
+     "status": "evidence-present",
+     "note": "supplier named for 100% of components, hashes for 100%"
+    }
+   },
+   "prev": "fc76cdbd4df8d7f85c632282f79f047442221c96419ea98dbde803e03c35dcb8",
+   "hash": "3e2ef901e5ab54245bc3519984747068f5493f490c8251d3b099dab9923d8823"
+  }
+ ],
+ "public_key": "w2cNRGpQduIjQuPwPZ+GchHMjlvlEkVMK/3eiMJSZPU=",
+ "key_fingerprint": "8DC1CCF8C3052039",
+ "signature": "gNckALA9nYPo5VoNHG6hU3DpFC4yE3Fg+HiK0cpbcBOEKe2NJ7CDOmsHGj+oanzZ+8Deq9gWcTZJp5UWAl9oAQ=="
+}

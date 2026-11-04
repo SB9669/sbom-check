@@ -1,0 +1,17 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.5",
+  "metadata": {
+    "timestamp": "2026-11-04T12:00:00Z",
+    "authors": [{"name": "Demo Vendor Inc."}]
+  },
+  "components": [
+    {"type": "library", "bom-ref": "jinja2", "name": "Jinja2", "version": "2.4.1", "purl": "pkg:pypi/jinja2@2.4.1",
+     "supplier": {"name": "Pallets"}, "hashes": [{"alg": "SHA-256", "content": "aa11"}]},
+    {"type": "library", "bom-ref": "requests", "name": "requests", "version": "2.19.0", "purl": "pkg:pypi/requests@2.19.0",
+     "supplier": {"name": "Python Software Foundation"}, "hashes": [{"alg": "SHA-256", "content": "bb22"}]},
+    {"type": "library", "bom-ref": "pyyaml", "name": "PyYAML", "version": "5.1", "purl": "pkg:pypi/pyyaml@5.1"},
+    {"type": "library", "bom-ref": "vendored", "name": "vendored-crypto-blob", "version": "1.0"}
+  ],
+  "dependencies": [{"ref": "jinja2", "dependsOn": []}]
+}

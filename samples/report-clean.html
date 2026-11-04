@@ -1,0 +1,25 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>SBOM evidence report</title>
+<meta name="viewport" content="width=device-width,initial-scale=1"><style>
+*{box-sizing:border-box}body{font:15px/1.5 system-ui,Segoe UI,sans-serif;color:#1b2430;margin:0;background:#f4f6f9}
+main{max-width:920px;margin:0 auto;padding:28px 20px 60px}h1{font-size:26px;margin:0 0 4px}h2{font-size:18px;margin:30px 0 8px}
+.muted{color:#5d6b7a;font-size:13px}.card{background:#fff;border:1px solid #dde3ea;border-radius:10px;padding:16px 18px;margin-top:12px}
+table{width:100%;border-collapse:collapse;background:#fff;border:1px solid #dde3ea;border-radius:10px;overflow:hidden;font-size:14px}
+th,td{text-align:left;padding:8px 12px;border-bottom:1px solid #eef1f5;vertical-align:top}th{background:#f0f3f7;font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:#5d6b7a}
+.chip,.sev{display:inline-block;padding:2px 9px;border-radius:99px;font-size:12px;font-weight:600;white-space:nowrap}
+.ok{background:#dcf5e5;color:#12683a}.warn{background:#fff0cf;color:#8a5a00}.bad{background:#fde0e0;color:#a31d1d}.mute{background:#e8ecf1;color:#475463}
+.sev.critical{background:#7a1020;color:#fff}.sev.high{background:#fde0e0;color:#a31d1d}.sev.moderate,.sev.medium{background:#fff0cf;color:#8a5a00}.sev.low,.sev.unrated,.sev.unknown{background:#e8ecf1;color:#475463}
+ul.chk{list-style:none;padding:0;margin:6px 0;display:flex;gap:8px;flex-wrap:wrap}ul.chk li{padding:3px 10px;border-radius:6px;font-size:13px}ul.chk .y{background:#dcf5e5;color:#12683a}ul.chk .n{background:#fde0e0;color:#a31d1d}
+.bar{display:grid;grid-template-columns:150px 1fr 44px;gap:10px;align-items:center;margin:4px 0;font-size:13px}.bar div{background:#e8ecf1;border-radius:99px;height:8px}.bar i{display:block;height:8px;border-radius:99px;background:#2a7de1}
+code{background:#eef1f5;padding:1px 5px;border-radius:4px;font-size:12.5px;word-break:break-all}.note{border-left:4px solid #2a7de1;background:#eaf2fd;padding:10px 14px;border-radius:6px;font-size:13px;margin:14px 0}
+</style></head><body><main>
+<h1>SBOM evidence report</h1>
+<div class="muted">2026-11-04T20:59:55Z &middot; sbom-evidence 0.1.0 &middot; <code>clean.cdx.json</code> (CycloneDX 1.5, 3 components)</div>
+<div class="note">Evidence mapping for an assessor. This is not an assessment, certification or guarantee of regulatory acceptance.</div>
+<h2>Control mapping (NIST SP 800-53 Rev. 5)</h2><table><tr><th>Control</th><th>Status</th><th>Basis</th></tr><tr><td>CM-8 System Component Inventory</td><td><span class="chip ok">evidence-present</span></td><td>SBOM lists 3 components; NTIA gaps: none</td></tr><tr><td>RA-5 Vulnerability Monitoring and Scanning</td><td><span class="chip ok">evidence-present</span></td><td>scanned 3 of 3 components against OSV.dev (api.osv.dev) at 2026-11-04T20:59:55Z</td></tr><tr><td>SI-2 Flaw Remediation</td><td><span class="chip ok">evidence-present</span></td><td>0 known vulnerabilities, 0 with a fixed version available</td></tr><tr><td>SR-4 Provenance</td><td><span class="chip ok">evidence-present</span></td><td>supplier named for 100% of components, hashes for 100%</td></tr></table>
+<h2>SBOM completeness</h2><div class="card"><b>NTIA minimum elements (2021): PASS</b>
+<div class="muted">Document level</div><ul class="chk"><li class="y">author of sbom data</li><li class="y">timestamp</li><li class="y">dependency relationships</li></ul><div class="bar"><span>supplier name</span><div><i style="width:100%"></i></div><b>100%</b></div><div class="bar"><span>component name</span><div><i style="width:100%"></i></div><b>100%</b></div><div class="bar"><span>component version</span><div><i style="width:100%"></i></div><b>100%</b></div><div class="bar"><span>unique identifier</span><div><i style="width:100%"></i></div><b>100%</b></div><div class="bar"><span>hash</span><div><i style="width:100%"></i></div><b>100%</b></div><div class="bar"><span>license</span><div><i style="width:100%"></i></div><b>100%</b></div>
+<div class="muted" style="margin-top:12px">CISA 2025 draft additions (verify against the current CISA publication): <b>met</b></div><ul class="chk"><li class="y">tool name</li><li class="y">generation context</li></ul></div>
+<h2>Known vulnerabilities</h2><p class='muted'>OSV.dev (api.osv.dev) &middot; 2026-11-04T20:59:55Z &middot; 0 found in 3 scanned components, 0 skipped (no package URL)</p><table><tr><th>ID</th><th>Severity</th><th>Affects</th><th>Fixed in</th></tr></table>
+<h2>How to verify this report</h2><div class="card">Run <code>python verify.py evidence.json --sbom clean.cdx.json --fingerprint 8DC1CCF8C3052039</code><br>
+<div class="muted" style="margin-top:8px">Chain head <code>3e2ef901e5ab54245bc3519984747068f5493f490c8251d3b099dab9923d8823</code><br>Signing key fingerprint <code>8DC1CCF8C3052039</code>. Pin this fingerprint: without it, verification shows the file was not altered, not who signed it.<br>SBOM sha256 <code>e5e0385f06699ad5da640725bfa84375f5e6f0019cd224573e931d8936c69289</code></div></div>
+</main></body></html>

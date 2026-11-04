@@ -1,0 +1,111 @@
+{
+ "bomFormat": "CycloneDX",
+ "specVersion": "1.5",
+ "metadata": {
+  "timestamp": "2026-11-04T12:00:00Z",
+  "authors": [
+   {
+    "name": "Demo Vendor Inc."
+   }
+  ],
+  "lifecycles": [
+   {
+    "phase": "build"
+   }
+  ],
+  "tools": {
+   "components": [
+    {
+     "type": "application",
+     "name": "syft",
+     "version": "1.0"
+    }
+   ]
+  }
+ },
+ "components": [
+  {
+   "type": "library",
+   "bom-ref": "click",
+   "name": "click",
+   "version": "8.1.7",
+   "purl": "pkg:pypi/click@8.1.7",
+   "supplier": {
+    "name": "Pallets"
+   },
+   "hashes": [
+    {
+     "alg": "SHA-256",
+     "content": "cc01"
+    }
+   ],
+   "licenses": [
+    {
+     "license": {
+      "id": "BSD-3-Clause"
+     }
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "bom-ref": "itsdangerous",
+   "name": "itsdangerous",
+   "version": "2.2.0",
+   "purl": "pkg:pypi/itsdangerous@2.2.0",
+   "supplier": {
+    "name": "Pallets"
+   },
+   "hashes": [
+    {
+     "alg": "SHA-256",
+     "content": "cc02"
+    }
+   ],
+   "licenses": [
+    {
+     "license": {
+      "id": "BSD-3-Clause"
+     }
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "bom-ref": "markupsafe",
+   "name": "MarkupSafe",
+   "version": "3.0.2",
+   "purl": "pkg:pypi/markupsafe@3.0.2",
+   "supplier": {
+    "name": "Pallets"
+   },
+   "hashes": [
+    {
+     "alg": "SHA-256",
+     "content": "cc03"
+    }
+   ],
+   "licenses": [
+    {
+     "license": {
+      "id": "BSD-3-Clause"
+     }
+    }
+   ]
+  }
+ ],
+ "dependencies": [
+  {
+   "ref": "click",
+   "dependsOn": []
+  },
+  {
+   "ref": "itsdangerous",
+   "dependsOn": []
+  },
+  {
+   "ref": "markupsafe",
+   "dependsOn": []
+  }
+ ]
+}

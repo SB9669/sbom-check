@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>SBOM check: is your SBOM ready for FDA, EU CRA and DoD review?</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Free SBOM completeness check that runs in your browser. Your file never leaves your machine. Optional signed, tamper-evident evidence report.">
+<style>
+*{box-sizing:border-box}
+body{margin:0;font:16px/1.55 system-ui,Segoe UI,sans-serif;color:#1b2430;background:#f6f8fb}
+header{background:#0f2238;color:#fff}
+.wrap{max-width:900px;margin:0 auto;padding:0 20px}
+header .wrap{display:flex;justify-content:space-between;align-items:center;height:56px}
+header b{letter-spacing:.02em;white-space:nowrap}header a{color:#b9cde4;text-decoration:none;font-size:14px;margin-left:18px;white-space:nowrap}
+@media(max-width:520px){header a{margin-left:12px;font-size:13px}header nav a:last-child{display:none}.hero h1{font-size:27px}}
+.hero{padding:44px 0 26px}.hero h1{font-size:34px;line-height:1.2;margin:0 0 12px}
+.hero p{font-size:18px;color:#3d4b5c;margin:0 0 6px;max-width:680px}
+.pill{display:inline-block;background:#e4f0ff;color:#155aa6;font-size:13px;font-weight:600;padding:3px 11px;border-radius:99px;margin-bottom:14px}
+.card{background:#fff;border:1px solid #dbe2ea;border-radius:12px;padding:20px 22px;margin:16px 0}
+#drop{border:2px dashed #9db4cc;border-radius:12px;padding:30px;text-align:center;background:#f9fbfd;cursor:pointer}
+#drop.over{background:#e9f3ff;border-color:#2a7de1}#drop b{display:block;font-size:18px;margin-bottom:4px}
+.muted{color:#5d6b7a;font-size:14px}
+button,.btn{font:inherit;font-weight:600;border:0;border-radius:8px;padding:10px 18px;background:#2a7de1;color:#fff;cursor:pointer;text-decoration:none;display:inline-block}
+button.alt,.btn.alt{background:#fff;color:#155aa6;border:1px solid #9db4cc}
+h2{font-size:22px;margin:34px 0 4px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px}
+.grid .card{margin:0}
+.res h3{margin:0 0 6px;font-size:19px}.ok{color:#12683a}.bad{color:#a31d1d}
+.bar{display:grid;grid-template-columns:150px 1fr 44px;gap:10px;align-items:center;margin:5px 0;font-size:14px}
+.bar div{background:#e8ecf1;border-radius:99px;height:9px}.bar i{display:block;height:9px;border-radius:99px;background:#2a7de1}
+.fix{background:#fff7e6;border-left:4px solid #e6a100;padding:9px 13px;border-radius:6px;margin:8px 0;font-size:14px}
+.chips{display:flex;gap:7px;flex-wrap:wrap;margin:6px 0}.chip{padding:3px 10px;border-radius:6px;font-size:13px}
+.chip.y{background:#dcf5e5;color:#12683a}.chip.n{background:#fde0e0;color:#a31d1d}
+table{width:100%;border-collapse:collapse;font-size:14px}td,th{padding:7px 10px;border-bottom:1px solid #eef1f5;text-align:left}
+code{background:#eef1f5;padding:1px 6px;border-radius:4px;font-size:13px}
+footer{margin:50px 0 30px;color:#5d6b7a;font-size:13px}
+.price{font-size:30px;font-weight:700}
+</style>
+</head>
+<body>
+<header><div class="wrap"><b>SBOM CHECK</b><nav><a href="#check">Free check</a><a href="#report">Signed report</a><a href="#limits">What it is not</a></nav></div></header>
+<main class="wrap">
+<section class="hero">
+  <span class="pill">Free &middot; runs in your browser &middot; nothing is uploaded</span>
+  <h1>Is your SBOM complete enough for FDA, EU CRA or DoD review?</h1>
+  <p>Drop in a CycloneDX or SPDX JSON file. In seconds you see what is missing and how to fix it. Your file stays on your machine.</p>
+</section>
+
+<section id="check" class="card">
+  <div id="drop"><b>Drop your SBOM here, or click to choose</b><span class="muted">CycloneDX or SPDX, JSON</span>
+  <input id="file" type="file" accept=".json,application/json" hidden></div>
+  <p class="muted" style="margin:10px 0 0">No file handy? <a href="#" id="demo1">Try an SBOM with typical gaps</a> or <a href="#" id="demo2">a complete one</a>.</p>
+</section>
+<section id="out"></section>
+
+<section id="report">
+  <h2>Need evidence an assessor can trust?</h2>
+  <p class="muted">The free check tells you what is missing. The signed report is what you hand to a reviewer.</p>
+  <div class="grid">
+    <div class="card"><b>What you get</b><ul><li>Completeness check against NTIA 2021 minimum elements and CISA's 2025 draft additions</li><li>Known-vulnerability scan of every component against OSV.dev</li><li>Mapping to NIST 800-53 controls CM-8, RA-5, SI-2, SR-4</li><li>A cryptographically signed, tamper-evident bundle plus a readable report</li></ul></div>
+    <div class="card"><div class="price">$79</div><div class="muted">per SBOM, one-time. Delivered within 24 hours.</div><p><a class="btn" href="https://github.com/SB9669/sbom-check/issues/new?title=Signed+report+request&body=Tell+me+which+standard+your+reviewer+needs+(FDA%2C+EU+CRA%2C+DoD)+and+how+to+reach+you.">Request a signed report</a></p><p class="muted" style="margin:0">Not satisfied? Full refund within 14 days.</p></div>
+  </div>
+  <h2 style="font-size:19px">How ordering works</h2>
+  <div class="grid">
+    <div class="card"><b>1. Check for free</b><div class="muted">Drop your SBOM above. See what is missing and how to fix it. Nothing is uploaded.</div></div>
+    <div class="card"><b>2. Order the report</b><div class="muted">Pay $79 through Stripe. The confirmation page tells you how to send your SBOM file.</div></div>
+    <div class="card"><b>3. Get it within 24 hours</b><div class="muted">You receive the signed bundle and a readable report. Your reviewer can verify it with the open verifier.</div></div>
+  </div>
+  <p style="margin-top:18px"><a href="samples/report-demo.html">See a real sample report</a> &middot; <a href="samples/report-clean.html">sample for a complete SBOM</a></p>
+  <p class="muted">Anyone can check a report with the <a href="verify.py">open verifier</a>: <code>python verify.py evidence.json --sbom your.json --fingerprint 8DC1CCF8C3052039</code><br>Reports are signed with the key whose fingerprint is <code>8DC1CCF8C3052039</code>. Compare it, so a forged report signed with someone else's key is caught.</p>
+</section>
+
+<section id="limits">
+  <h2>What this is not</h2>
+  <div class="card muted" style="color:#3d4b5c">
+  It is an evidence aid, not a certification. It does not guarantee FDA, EU or DoD acceptance, and it is not legal or regulatory advice. The completeness check follows the NTIA 2021 minimum elements; the CISA 2025 additions shown are from a draft, so confirm them against CISA's current publication. Vulnerability data comes from the public OSV.dev database and can miss issues, especially in firmware or vendored code without a package URL.
+  </div>
+</section>
+<footer>Independent project. Questions, or a format your reviewer rejected? I want to hear it: <a href="https://github.com/SB9669/sbom-check/issues">open an issue</a>.</footer>
+</main>
+
+<script>
+const $=id=>document.getElementById(id);
+const drop=$('drop'), file=$('file');
+drop.onclick=()=>file.click();
+['dragover','dragenter'].forEach(e=>drop.addEventListener(e,ev=>{ev.preventDefault();drop.classList.add('over')}));
+['dragleave','drop'].forEach(e=>drop.addEventListener(e,ev=>{ev.preventDefault();drop.classList.remove('over')}));
+drop.addEventListener('drop',ev=>{if(ev.dataTransfer.files[0])read(ev.dataTransfer.files[0])});
+file.onchange=()=>{if(file.files[0])read(file.files[0])};
+function read(f){
+  if(f.size>50*1024*1024)return show('<div class="card bad">That file is over 50 MB. Split it or contact me.</div>');
+  const r=new FileReader();r.onload=()=>run(r.result,f.name);r.readAsText(f);
+}
+function normCdx(d){
+  const m=d.metadata||{};const t=m.tools;
+  const tool=Array.isArray(t)?t.length>0:!!(t&&((t.components||[]).length||(t.services||[]).length));
+  return {fmt:'CycloneDX '+(d.specVersion||'?'),ts:!!m.timestamp,author:!!((m.authors||[]).length||m.manufacture||tool),
+    rel:!!(d.dependencies||[]).length,tool,ctx:!!(m.lifecycles||[]).length,
+    comps:(d.components||[]).map(c=>({name:c.name||'',ver:c.version||'',purl:c.purl||'',cpe:c.cpe||'',
+      sup:((c.supplier||{}).name)||c.publisher||'',hash:!!(c.hashes||[]).length,lic:!!(c.licenses||[]).length}))};
+}
+function normSpdx(d){
+  const ci=d.creationInfo||{};
+  return {fmt:String(d.spdxVersion||'').startsWith('SPDX')?d.spdxVersion:'SPDX '+(d.spdxVersion||'?'),ts:!!ci.created,author:!!(ci.creators||[]).length,rel:!!(d.relationships||[]).length,
+    tool:(ci.creators||[]).some(c=>String(c).startsWith('Tool:')),ctx:false,
+    comps:(d.packages||[]).map(p=>{let purl='',cpe='';(p.externalRefs||[]).forEach(r=>{if(r.referenceType==='purl')purl=r.referenceLocator||'';if(String(r.referenceType).startsWith('cpe'))cpe=r.referenceLocator||''});
+      const sup=['NOASSERTION','NONE'].includes(p.supplier)?'':(p.supplier||'');
+      const lic=['licenseConcluded','licenseDeclared'].some(k=>p[k]&&!['NOASSERTION','NONE'].includes(p[k]));
+      return {name:p.name||'',ver:p.versionInfo||'',purl,cpe,sup,hash:!!(p.checksums||[]).length,lic}})};
+}
+function run(text,name){
+  let d;try{d=JSON.parse(text)}catch(e){return show('<div class="card bad"><b>That is not valid JSON.</b><br>This checker reads CycloneDX or SPDX JSON files. XML and other formats are not supported yet.</div>')}
+  let s;
+  if(d&&d.bomFormat==='CycloneDX')s=normCdx(d);else if(d&&d.spdxVersion)s=normSpdx(d);
+  else return show('<div class="card bad"><b>This does not look like an SBOM.</b><br>I expected a CycloneDX file (has "bomFormat") or an SPDX file (has "spdxVersion").</div>');
+  const n=s.comps.length;if(!n)return show('<div class="card bad"><b>No components found.</b> An SBOM with no components cannot be checked.</div>');
+  const cov=f=>Math.round(100*s.comps.filter(f).length/n);
+  const pct={'supplier name':cov(c=>c.sup),'component name':cov(c=>c.name),'component version':cov(c=>c.ver),'unique identifier':cov(c=>c.purl||c.cpe),'hash (CISA draft)':cov(c=>c.hash),'license (CISA draft)':cov(c=>c.lic)};
+  const doc={'author of SBOM data':s.author,'timestamp':s.ts,'dependency relationships':s.rel};
+  const cdoc={'tool name':s.tool,'generation context':s.ctx};
+  const ntiaOk=Object.values(doc).every(Boolean)&&['supplier name','component name','component version','unique identifier'].every(k=>pct[k]===100);
+  const cisaOk=Object.values(cdoc).every(Boolean)&&pct['hash (CISA draft)']===100&&pct['license (CISA draft)']===100;
+  const fixes=[];
+  if(!s.author)fixes.push('Add who made the SBOM: set <code>metadata.authors</code> (CycloneDX) or <code>creationInfo.creators</code> (SPDX).');
+  if(!s.ts)fixes.push('Add a creation timestamp (<code>metadata.timestamp</code> / <code>creationInfo.created</code>).');
+  if(!s.rel)fixes.push('Add dependency relationships (<code>dependencies</code> / <code>relationships</code>) so reviewers can see what depends on what.');
+  if(pct['supplier name']<100)fixes.push((n-s.comps.filter(c=>c.sup).length)+' component(s) have no supplier. Name the vendor or project for each one.');
+  if(pct['unique identifier']<100)fixes.push((n-s.comps.filter(c=>c.purl||c.cpe).length)+' component(s) have no package URL (purl) or CPE. Firmware blobs and vendored code often hit this; add an identifier by hand.');
+  if(pct['component version']<100)fixes.push('Some components have no version.');
+  if(pct['hash (CISA draft)']<100)fixes.push('Add a hash (SHA-256) for each component.');
+  if(pct['license (CISA draft)']<100)fixes.push('Add a license for each component.');
+  if(!s.tool)fixes.push('Record which tool generated the SBOM.');
+  if(!s.ctx&&s.fmt.startsWith('CycloneDX'))fixes.push('Record the generation context (<code>metadata.lifecycles</code>, e.g. build).');
+  const chips=o=>'<div class="chips">'+Object.entries(o).map(([k,v])=>'<span class="chip '+(v?'y':'n')+'">'+(v?'&#10003; ':'&#10007; ')+k+'</span>').join('')+'</div>';
+  const bars=Object.entries(pct).map(([k,v])=>'<div class="bar"><span>'+k+'</span><div><i style="width:'+v+'%"></i></div><b>'+v+'%</b></div>').join('');
+  show('<div class="card res"><h3>'+esc(name)+' <span class="muted">'+s.fmt+', '+n+' components</span></h3>'+
+    '<p><b class="'+(ntiaOk?'ok':'bad')+'">NTIA minimum elements (2021): '+(ntiaOk?'complete':'gaps found')+'</b><br><span class="muted">CISA 2025 draft additions: <b>'+(cisaOk?'met':'not met')+'</b> (draft; confirm against CISA\'s current publication)</span></p>'+
+    '<div class="muted">Document</div>'+chips(doc)+chips(cdoc)+bars+
+    (fixes.length?'<h3 style="margin-top:18px">How to fix</h3>'+fixes.map(f=>'<div class="fix">'+f+'</div>').join(''):'<p class="ok"><b>Nothing to fix for these checks.</b></p>')+
+    '<p style="margin-top:16px"><a class="btn" href="#report">Get a signed evidence report</a> <span class="muted">includes the known-vulnerability scan</span></p></div>');
+}
+function esc(t){return String(t).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]))}
+function show(h){$('out').innerHTML=h;$('out').scrollIntoView({behavior:'smooth'})}
+async function demo(path,ev){ev.preventDefault();try{const r=await fetch(path);run(await r.text(),path.split('/').pop())}catch(e){show('<div class="card bad">Could not load the demo (open this page from a web server, not a file).</div>')}}
+$('demo1').onclick=e=>demo('samples/demo.cdx.json',e);
+$('demo2').onclick=e=>demo('samples/clean.cdx.json',e);
+</script>
+</body>
+</html>

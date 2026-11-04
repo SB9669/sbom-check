@@ -1,0 +1,624 @@
+{
+ "format": "sbom-evidence/0.1",
+ "tool": "sbom-evidence 0.1.0",
+ "created": "2026-11-04T20:59:55Z",
+ "head": "49a1e6eb3ef87bfb66ef5ed4c95469ade3699dd2219e7a92dfc03199925444de",
+ "entries": [
+  {
+   "seq": 0,
+   "type": "sbom",
+   "data": {
+    "file": "demo.cdx.json",
+    "sha256": "7416ad08c2f8e2d003471eb060e085dfd0ec14650c3953cb9b28b83915b09020",
+    "format": "CycloneDX 1.5",
+    "components": 4
+   },
+   "prev": "0000000000000000000000000000000000000000000000000000000000000000",
+   "hash": "667a9e81dfeb35bf1277f6455e04037d5f2eb0a392c6821d0ed8dcf3593c1042"
+  },
+  {
+   "seq": 1,
+   "type": "conformance",
+   "data": {
+    "standard": "NTIA minimum elements (2021)",
+    "components": 4,
+    "document_level": {
+     "author_of_sbom_data": true,
+     "timestamp": true,
+     "dependency_relationships": true
+    },
+    "component_level_covered": {
+     "supplier_name": 2,
+     "component_name": 4,
+     "component_version": 4,
+     "unique_identifier": 3
+    },
+    "recommended_covered": {
+     "hash": 2,
+     "license": 0
+    },
+    "coverage_pct": {
+     "supplier_name": 50,
+     "component_name": 100,
+     "component_version": 100,
+     "unique_identifier": 75,
+     "hash": 50,
+     "license": 0
+    },
+    "cisa_2025_draft_additions": {
+     "note": "hash, license, tool name and generation context from CISA's 2025 draft update to the minimum elements; verify against the current CISA publication",
+     "document_level": {
+      "tool_name": false,
+      "generation_context": false
+     },
+     "component_hash_pct": 50,
+     "component_license_pct": 0,
+     "pass": false
+    },
+    "failures": [
+     "supplier_name",
+     "unique_identifier"
+    ],
+    "pass": false
+   },
+   "prev": "667a9e81dfeb35bf1277f6455e04037d5f2eb0a392c6821d0ed8dcf3593c1042",
+   "hash": "23a5058077af9ea6b7aa728a5b4a4de8e9fddbe6af6967a592b6cf2f7103972e"
+  },
+  {
+   "seq": 2,
+   "type": "vulnerability-scan",
+   "data": {
+    "source": "OSV.dev (api.osv.dev)",
+    "scanned_at": "2026-11-04T20:59:53Z",
+    "components_scanned": 3,
+    "components_skipped_no_purl": 1,
+    "findings": [
+     {
+      "id": "GHSA-3pqx-4fqf-j49f",
+      "cves": [
+       "CVE-2019-20477"
+      ],
+      "cvss_vector": "",
+      "severity": "CRITICAL",
+      "summary": "Deserialization of Untrusted Data in PyYAML",
+      "fixed_in": [
+       "5.2"
+      ],
+      "affects": [
+       "pkg:pypi/pyyaml@5.1"
+      ]
+     },
+     {
+      "id": "GHSA-462w-v97r-4m45",
+      "cves": [
+       "CVE-2019-10906"
+      ],
+      "cvss_vector": "",
+      "severity": "HIGH",
+      "summary": "Jinja2 sandbox escape via string formatting",
+      "fixed_in": [
+       "2.10.1"
+      ],
+      "affects": [
+       "pkg:pypi/jinja2@2.4.1"
+      ]
+     },
+     {
+      "id": "GHSA-6757-jp84-gxfx",
+      "cves": [
+       "CVE-2020-1747"
+      ],
+      "cvss_vector": "",
+      "severity": "CRITICAL",
+      "summary": "Improper Input Validation in PyYAML",
+      "fixed_in": [
+       "5.3.1"
+      ],
+      "affects": [
+       "pkg:pypi/pyyaml@5.1"
+      ]
+     },
+     {
+      "id": "GHSA-8q59-q68h-6hv4",
+      "cves": [
+       "CVE-2020-14343"
+      ],
+      "cvss_vector": "",
+      "severity": "CRITICAL",
+      "summary": "Improper Input Validation in PyYAML",
+      "fixed_in": [
+       "5.4"
+      ],
+      "affects": [
+       "pkg:pypi/pyyaml@5.1"
+      ]
+     },
+     {
+      "id": "GHSA-8r7q-cvjq-x353",
+      "cves": [
+       "CVE-2014-1402"
+      ],
+      "cvss_vector": "",
+      "severity": "HIGH",
+      "summary": "Incorrect Privilege Assignment in Jinja2",
+      "fixed_in": [
+       "2.7.2"
+      ],
+      "affects": [
+       "pkg:pypi/jinja2@2.4.1"
+      ]
+     },
+     {
+      "id": "GHSA-9hjg-9r4m-mvj7",
+      "cves": [
+       "CVE-2024-47081"
+      ],
+      "cvss_vector": "",
+      "severity": "MODERATE",
+      "summary": "Requests vulnerable to .netrc credentials leak via malicious URLs",
+      "fixed_in": [
+       "2.32.4"
+      ],
+      "affects": [
+       "pkg:pypi/requests@2.19.0"
+      ]
+     },
+     {
+      "id": "GHSA-9wx4-h78v-vm56",
+      "cves": [
+       "CVE-2024-35195"
+      ],
+      "cvss_vector": "",
+      "severity": "MODERATE",
+      "summary": "Requests `Session` object does not verify requests after making first request with verify=False",
+      "fixed_in": [
+       "2.32.0"
+      ],
+      "affects": [
+       "pkg:pypi/requests@2.19.0"
+      ]
+     },
+     {
+      "id": "GHSA-cpwx-vrp4-4pq7",
+      "cves": [
+       "CVE-2025-27516"
+      ],
+      "cvss_vector": "",
+      "severity": "MODERATE",
+      "summary": "Jinja2 vulnerable to sandbox breakout through attr filter selecting format method",
+      "fixed_in": [
+       "3.1.6"
+      ],
+      "affects": [
+       "pkg:pypi/jinja2@2.4.1"
+      ]
+     },
+     {
+      "id": "GHSA-fqh9-2qgg-h84h",
+      "cves": [
+       "CVE-2014-0012"
+      ],
+      "cvss_vector": "",
+      "severity": "MODERATE",
+      "summary": "Insecure Temporary File in Jinja2",
+      "fixed_in": [
+       "2.7.2"
+      ],
+      "affects": [
+       "pkg:pypi/jinja2@2.4.1"
+      ]
+     },
+     {
+      "id": "GHSA-g3rq-g295-4j3m",
+      "cves": [
+       "CVE-2020-28493"
+      ],
+      "cvss_vector": "",
+      "severity": "MODERATE",
+      "summary": "Regular Expression Denial of Service (ReDoS) in Jinja2",
+      "fixed_in": [
+       "2.11.3"
+      ],
+      "affects": [
+       "pkg:pypi/jinja2@2.4.1"
+      ]
+     },
+     {
+      "id": "GHSA-gc5v-m9x4-r6x2",
+      "cves": [
+       "CVE-2026-25645"
+      ],
+      "cvss_vector": "",
+      "severity": "MODERATE",
+      "summary": "Requests has Insecure Temp File Reuse in its extract_zipped_paths() utility function",
+      "fixed_in": [
+       "2.33.0"
+      ],
+      "affects": [
+       "pkg:pypi/requests@2.19.0"
+      ]
+     },
+     {
+      "id": "GHSA-h5c8-rqwp-cp95",
+      "cves": [
+       "CVE-2024-22195"
+      ],
+      "cvss_vector": "",
+      "severity": "MODERATE",
+      "summary": "Jinja vulnerable to HTML attribute injection when passing user input as keys to xmlattr filter",
+      "fixed_in": [
+       "3.1.3"
+      ],
+      "affects": [
+       "pkg:pypi/jinja2@2.4.1"
+      ]
+     },
+     {
+      "id": "GHSA-h75v-3vvj-5mfj",
+      "cves": [
+       "CVE-2024-34064"
+      ],
+      "cvss_vector": "",
+      "severity": "MODERATE",
+      "summary": "Jinja vulnerable to HTML attribute injection when passing user input as keys to xmlattr filter",
+      "fixed_in": [
+       "3.1.4"
+      ],
+      "affects": [
+       "pkg:pypi/jinja2@2.4.1"
+      ]
+     },
+     {
+      "id": "GHSA-hj2j-77xm-mc5v",
+      "cves": [
+       "CVE-2016-10745"
+      ],
+      "cvss_vector": "",
+      "severity": "HIGH",
+      "summary": "Jinja2 sandbox escape vulnerability",
+      "fixed_in": [
+       "2.8.1"
+      ],
+      "affects": [
+       "pkg:pypi/jinja2@2.4.1"
+      ]
+     },
+     {
+      "id": "GHSA-j8r2-6x86-q33q",
+      "cves": [
+       "CVE-2023-32681"
+      ],
+      "cvss_vector": "",
+      "severity": "MODERATE",
+      "summary": "Unintended leak of Proxy-Authorization header in requests",
+      "fixed_in": [
+       "2.31.0"
+      ],
+      "affects": [
+       "pkg:pypi/requests@2.19.0"
+      ]
+     },
+     {
+      "id": "GHSA-q2x7-8rv6-6q7h",
+      "cves": [
+       "CVE-2024-56326"
+      ],
+      "cvss_vector": "",
+      "severity": "MODERATE",
+      "summary": "Jinja has a sandbox breakout through indirect reference to format method",
+      "fixed_in": [
+       "3.1.5"
+      ],
+      "affects": [
+       "pkg:pypi/jinja2@2.4.1"
+      ]
+     },
+     {
+      "id": "GHSA-x84v-xcm2-53pg",
+      "cves": [
+       "CVE-2018-18074"
+      ],
+      "cvss_vector": "",
+      "severity": "HIGH",
+      "summary": "Insufficiently Protected Credentials in Requests",
+      "fixed_in": [
+       "2.20.0"
+      ],
+      "affects": [
+       "pkg:pypi/requests@2.19.0"
+      ]
+     },
+     {
+      "id": "PYSEC-2014-8",
+      "cves": [
+       "CVE-2014-1402"
+      ],
+      "cvss_vector": "",
+      "severity": "UNKNOWN",
+      "summary": "",
+      "fixed_in": [
+       "2.7.2"
+      ],
+      "affects": [
+       "pkg:pypi/jinja2@2.4.1"
+      ]
+     },
+     {
+      "id": "PYSEC-2014-82",
+      "cves": [
+       "CVE-2014-0012"
+      ],
+      "cvss_vector": "",
+      "severity": "UNKNOWN",
+      "summary": "",
+      "fixed_in": [
+       "2.7.3",
+       "acb672b6a179567632e032f547582f30fa2f4aa7"
+      ],
+      "affects": [
+       "pkg:pypi/jinja2@2.4.1"
+      ]
+     },
+     {
+      "id": "PYSEC-2018-28",
+      "cves": [
+       "CVE-2018-18074"
+      ],
+      "cvss_vector": "",
+      "severity": "UNKNOWN",
+      "summary": "",
+      "fixed_in": [
+       "2.20.0",
+       "c45d7c49ea75133e52ab22a8e9e13173938e36ff"
+      ],
+      "affects": [
+       "pkg:pypi/requests@2.19.0"
+      ]
+     },
+     {
+      "id": "PYSEC-2019-217",
+      "cves": [
+       "CVE-2019-10906"
+      ],
+      "cvss_vector": "",
+      "severity": "UNKNOWN",
+      "summary": "",
+      "fixed_in": [
+       "2.10.1"
+      ],
+      "affects": [
+       "pkg:pypi/jinja2@2.4.1"
+      ]
+     },
+     {
+      "id": "PYSEC-2019-220",
+      "cves": [
+       "CVE-2016-10745"
+      ],
+      "cvss_vector": "",
+      "severity": "UNKNOWN",
+      "summary": "",
+      "fixed_in": [
+       "2.8.1",
+       "9b53045c34e61013dc8f09b7e52a555fa16bed16"
+      ],
+      "affects": [
+       "pkg:pypi/jinja2@2.4.1"
+      ]
+     },
+     {
+      "id": "PYSEC-2020-176",
+      "cves": [
+       "CVE-2019-20477"
+      ],
+      "cvss_vector": "",
+      "severity": "UNKNOWN",
+      "summary": "",
+      "fixed_in": [
+       "5.2b1"
+      ],
+      "affects": [
+       "pkg:pypi/pyyaml@5.1"
+      ]
+     },
+     {
+      "id": "PYSEC-2020-96",
+      "cves": [
+       "CVE-2020-1747"
+      ],
+      "cvss_vector": "",
+      "severity": "UNKNOWN",
+      "summary": "",
+      "fixed_in": [
+       "5.3.1"
+      ],
+      "affects": [
+       "pkg:pypi/pyyaml@5.1"
+      ]
+     },
+     {
+      "id": "PYSEC-2021-142",
+      "cves": [
+       "CVE-2020-14343"
+      ],
+      "cvss_vector": "",
+      "severity": "UNKNOWN",
+      "summary": "",
+      "fixed_in": [
+       "5.4"
+      ],
+      "affects": [
+       "pkg:pypi/pyyaml@5.1"
+      ]
+     },
+     {
+      "id": "PYSEC-2021-66",
+      "cves": [
+       "CVE-2020-28493"
+      ],
+      "cvss_vector": "",
+      "severity": "UNKNOWN",
+      "summary": "",
+      "fixed_in": [
+       "2.11.3"
+      ],
+      "affects": [
+       "pkg:pypi/jinja2@2.4.1"
+      ]
+     },
+     {
+      "id": "PYSEC-2023-74",
+      "cves": [
+       "CVE-2023-32681"
+      ],
+      "cvss_vector": "",
+      "severity": "UNKNOWN",
+      "summary": "",
+      "fixed_in": [
+       "2.31.0",
+       "74ea7cf7a6a27a4eeb2ae24e162bcc942a6706d5"
+      ],
+      "affects": [
+       "pkg:pypi/requests@2.19.0"
+      ]
+     },
+     {
+      "id": "PYSEC-2026-1471",
+      "cves": [
+       "CVE-2025-27516"
+      ],
+      "cvss_vector": "CVSS:4.0/AV:L/AC:L/AT:P/PR:L/UI:P/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
+      "severity": "UNRATED",
+      "summary": "Jinja2 vulnerable to sandbox breakout through attr filter selecting format method",
+      "fixed_in": [
+       "3.1.6"
+      ],
+      "affects": [
+       "pkg:pypi/jinja2@2.4.1"
+      ]
+     },
+     {
+      "id": "PYSEC-2026-1473",
+      "cves": [
+       "CVE-2024-22195"
+      ],
+      "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N",
+      "severity": "UNRATED",
+      "summary": "Jinja vulnerable to HTML attribute injection when passing user input as keys to xmlattr filter",
+      "fixed_in": [
+       "3.1.3"
+      ],
+      "affects": [
+       "pkg:pypi/jinja2@2.4.1"
+      ]
+     },
+     {
+      "id": "PYSEC-2026-1474",
+      "cves": [
+       "CVE-2024-34064"
+      ],
+      "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N",
+      "severity": "UNRATED",
+      "summary": "Jinja vulnerable to HTML attribute injection when passing user input as keys to xmlattr filter",
+      "fixed_in": [
+       "3.1.4"
+      ],
+      "affects": [
+       "pkg:pypi/jinja2@2.4.1"
+      ]
+     },
+     {
+      "id": "PYSEC-2026-1475",
+      "cves": [
+       "CVE-2024-56326"
+      ],
+      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "severity": "UNRATED",
+      "summary": "Jinja has a sandbox breakout through indirect reference to format method",
+      "fixed_in": [
+       "3.1.5"
+      ],
+      "affects": [
+       "pkg:pypi/jinja2@2.4.1"
+      ]
+     },
+     {
+      "id": "PYSEC-2026-1872",
+      "cves": [
+       "CVE-2024-47081"
+      ],
+      "cvss_vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:N/A:N",
+      "severity": "UNRATED",
+      "summary": "Requests vulnerable to .netrc credentials leak via malicious URLs",
+      "fixed_in": [
+       "2.32.4"
+      ],
+      "affects": [
+       "pkg:pypi/requests@2.19.0"
+      ]
+     },
+     {
+      "id": "PYSEC-2026-1873",
+      "cves": [
+       "CVE-2024-35195"
+      ],
+      "cvss_vector": "CVSS:3.1/AV:L/AC:H/PR:H/UI:R/S:U/C:H/I:H/A:N",
+      "severity": "UNRATED",
+      "summary": "Requests `Session` object does not verify requests after making first request with verify=False",
+      "fixed_in": [
+       "2.32.0"
+      ],
+      "affects": [
+       "pkg:pypi/requests@2.19.0"
+      ]
+     },
+     {
+      "id": "PYSEC-2026-2275",
+      "cves": [
+       "CVE-2026-25645"
+      ],
+      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N",
+      "severity": "UNRATED",
+      "summary": "",
+      "fixed_in": [
+       "2.33.0"
+      ],
+      "affects": [
+       "pkg:pypi/requests@2.19.0"
+      ]
+     }
+    ],
+    "truncated": false
+   },
+   "prev": "23a5058077af9ea6b7aa728a5b4a4de8e9fddbe6af6967a592b6cf2f7103972e",
+   "hash": "59dd45e36678327c0fc760b734af0169e9066027fe0f34055245330537e1de25"
+  },
+  {
+   "seq": 3,
+   "type": "control-mapping",
+   "data": {
+    "CM-8 System Component Inventory": {
+     "status": "gaps",
+     "note": "SBOM lists 4 components; NTIA gaps: supplier_name, unique_identifier"
+    },
+    "RA-5 Vulnerability Monitoring and Scanning": {
+     "status": "evidence-present",
+     "note": "scanned 3 of 4 components against OSV.dev (api.osv.dev) at 2026-11-04T20:59:53Z"
+    },
+    "SI-2 Flaw Remediation": {
+     "status": "action-needed",
+     "note": "34 known vulnerabilities, 34 with a fixed version available"
+    },
+    "SR-4 Provenance": {
+     "status": "gaps",
+     "note": "supplier named for 50% of components, hashes for 50%"
+    }
+   },
+   "prev": "59dd45e36678327c0fc760b734af0169e9066027fe0f34055245330537e1de25",
+   "hash": "49a1e6eb3ef87bfb66ef5ed4c95469ade3699dd2219e7a92dfc03199925444de"
+  }
+ ],
+ "public_key": "w2cNRGpQduIjQuPwPZ+GchHMjlvlEkVMK/3eiMJSZPU=",
+ "key_fingerprint": "8DC1CCF8C3052039",
+ "signature": "ItoMWcg2k7ngh55v3QAzz5CfwU4Y99dLXR76nrD/NXoNTIVE0E4YnvzrwrZN7t+5jOzfEcwq6HWnvpwhG9QYDA=="
+}
